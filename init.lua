@@ -26,7 +26,7 @@ local config = {
   },
 
   -- Set colorscheme to use
-  colorscheme = "default_theme",
+  colorscheme = "nord",
 
   -- Add highlight groups in any theme
   highlights = {
@@ -45,8 +45,12 @@ local config = {
       relativenumber = true, -- sets vim.opt.relativenumber
       number = true, -- sets vim.opt.number
       spell = false, -- sets vim.opt.spell
-      signcolumn = "auto", -- sets vim.opt.signcolumn to auto
-      wrap = false, -- sets vim.opt.wrap
+      -- signcolumn = "auto", -- sets vim.opt.signcolumn to auto
+      wrap = true, -- sets vim.opt.wrap
+      lbr = true,
+      tw = 300,
+      ai = true,
+      si = true,
     },
     g = {
       mapleader = " ", -- sets vim.g.mapleader
@@ -218,7 +222,7 @@ local config = {
     init = {
       -- You can disable default plugins as follows:
       -- ["goolord/alpha-nvim"] = { disable = true },
-
+      { "shaunsingh/nord.nvim" },
       -- You can also add new plugins here as well:
       -- Add plugins, the packer syntax without the "use"
       -- { "andweeb/presence.nvim" },
